@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="CATCH KENNY GAME"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +27,9 @@
         android:layout_width="133dp"
         android:layout_height="37dp"
         android:layout_marginTop="30dp"
-        android:text=" TIMER: 30"
+        android:text="TIMER: 30"
         android:textSize="24sp"
+        android:textColor="#3F51B5"
         app:layout_constraintEnd_toStartOf="@+id/textScore"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHeader" />
@@ -39,24 +42,40 @@
         android:layout_marginEnd="20dp"
         android:text="SCORE: 0"
         android:textSize="24sp"
+        android:textColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHeader" />
 
     <TextView
-        android:id="@+id/textGameOver"
+        android:id="@+id/textLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:textColor="#FF5722"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textScore"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTimer" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="LEVEL: 1" />
+
+    <TextView
+        android:id="@+id/textGameOverMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="GAME OVER"
+        android:textColor="#D32F2F"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <FrameLayout
         android:id="@+id/gameArea"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#EEEEEE"
-        app:layout_constraintTop_toBottomOf="@id/textGameOver"
+        app:layout_constraintTop_toBottomOf="@id/textGameOverMessage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
