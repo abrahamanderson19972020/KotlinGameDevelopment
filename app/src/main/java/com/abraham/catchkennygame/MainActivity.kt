@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
             override fun onFinish() {
                 binding.textTimer.text = "TIMER: 0"
                 binding.textGameOver.text = "GAME OVER"
+                handler.removeCallbacks(moveRunnable)
+                imageView.animate().cancel()
+                imageView.x = 0f
+                imageView.y = 0f
             }
 
         }
